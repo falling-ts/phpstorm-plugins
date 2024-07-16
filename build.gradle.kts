@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.falling"
-version = "1.3"
+version = "1.0"
 
 repositories {
     mavenCentral()
