@@ -1,0 +1,52 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.falling.plugins</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Plugins</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="zgh.yuanshang@gmail.com" url="https://www.yourcompany.com">Falling TS</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+      Falling TS PhpStorm 提供代码开发繁琐操作的一键式功能。<br/>
+      <br/>
+      PhpStorm 版本：2024.1.1。注意其它版本可能会有一些兼容问题。<br/>
+      插件版本：1.0。
+  ]]></description>
+
+    <change-notes><![CDATA[
+      1.0--更新到 IDE 2024。<br/>
+  ]]></change-notes>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <group id="FallingTS" text="FallingTS" description="FallingTS phpStorm plugins">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="com.falling.phpstormplugins.UseFormat" class="com.falling.phpstormplugins.UseFormat" text="Use Format"
+                    description="Use format">
+                <add-to-group group-id="FallingTS" anchor="first"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="alt F"/>
+            </action>
+            <action id="com.falling.phpstormplugins.ImportFormat" class="com.falling.phpstormplugins.ImportFormat" text="Import Format"
+                    description="Import format">
+                <add-to-group group-id="FallingTS" anchor="last"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
