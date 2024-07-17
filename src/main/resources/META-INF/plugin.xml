@@ -34,19 +34,17 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
     <actions>
-        <group id="FallingTS" text="FallingTS" description="FallingTS phpStorm plugins">
+        <action id="com.falling.phpstormplugins.ImportFormat" class="com.falling.phpstormplugins.ImportFormat"
+                text="Import Format" description="Import Format">
             <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="com.falling.phpstormplugins.UseFormat" class="com.falling.phpstormplugins.UseFormat" text="Use Format"
-                    description="Use format">
-                <add-to-group group-id="FallingTS" anchor="first"/>
-                <keyboard-shortcut keymap="$default" first-keystroke="alt F"/>
-            </action>
-            <action id="com.falling.phpstormplugins.ImportFormat" class="com.falling.phpstormplugins.ImportFormat" text="Import Format"
-                    description="Import format">
-                <add-to-group group-id="FallingTS" anchor="last"/>
-                <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
-            </action>
-        </group>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
+        </action>
+        <action id="com.falling.phpstormplugins.UseFormat" class="com.falling.phpstormplugins.UseFormat"
+                text="Use Format" description="Use Format">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt F"/>
+        </action>
     </actions>
 </idea-plugin>
