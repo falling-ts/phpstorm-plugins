@@ -37,12 +37,12 @@
     </extensions>
 
     <actions>
-        <action id="com.falling.phpstormplugins.ImportFormat" class="com.falling.phpstormplugins.ImportFormat"
+        <action id="com.falling.phpstorm_plugins.ImportFormat" class="com.falling.phpstorm_plugins.ImportFormat"
                 text="Import Format" description="Import Format">
             <add-to-group group-id="MainMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt D"/>
         </action>
-        <action id="com.falling.phpstormplugins.UseFormat" class="com.falling.phpstormplugins.UseFormat"
+        <action id="com.falling.phpstorm_plugins.UseFormat" class="com.falling.phpstorm_plugins.UseFormat"
                 text="Use Format" description="Use Format">
             <add-to-group group-id="MainMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt F"/>
